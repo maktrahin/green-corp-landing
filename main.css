@@ -13,6 +13,10 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 padding: 20px;
+position: sticky;
+top: 0;
+background: white;
+z-index: 1;
 }
 .header__logo {
     height: 30px;
@@ -167,18 +171,24 @@ footer {
 }
 .footer__group {
     margin-right: 80px;
+}
+footer h3 {
     font-size: 16px;
     opacity: 0.7;
     margin-bottom: 30px;
 }
 .footer__group_1 {
     margin-right: 80px;
+}
+footer h3 {
     font-size: 16px;
     opacity: 0.7;
     margin-bottom: 30px;
 }
 .footer__group_2 {
     margin-right: 80px;
+}
+footer h3 {
     font-size: 16px;
     opacity: 0.7;
     margin-bottom: 30px;
@@ -186,8 +196,112 @@ footer {
 .footer__links {
     display: flex; 
     flex-direction: column;
-    
 }
 a {
     margin-bottom: 15px;
 }
+@keyframes rotation {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+ }
+ .about__sun-image {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    animation-name: rotation;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+ }
+ @media (min-width: 320px) {
+     
+    .form label {
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+    .form {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    header {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .header__logo {
+        height: 20px;
+    }
+    header a {
+        margin-right: 20px;
+    }
+    .about {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .about h1 {
+        font-size: 36px;
+        line-height: 40px;
+    }
+    .form {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .form h1 {
+      font-size: 36px;
+      line-height: 40px;
+    }
+    .about__image {
+        width: 280px;
+    }
+    .about__sun-image {
+        width: 75px;
+        height: 75px;
+    }
+    footer {
+      padding-left: 10px;
+      padding-right: 10px; 
+    }
+  }
+  @media (min-width: 720px) {
+      header {
+          padding-left: 20px;
+          padding-right: 20px;
+      }
+      .header__logo {
+          height: 20px;
+      }
+      header a {
+          margin-right: 20px;
+      }
+      .about {
+          padding-left: 20px;
+          padding-right: 20px;
+      }
+      .about h1 {
+          font-size: 36px;
+          line-height: 40px;
+      }
+      .form {
+          padding-left: 20px;
+          padding-right: 20px;
+      }
+      .form h1 {
+        font-size: 36px;
+        line-height: 40px;
+      }
+      .about__image {
+          width: 280px;
+      }
+      .about__sun-image {
+          width: 75px;
+          height: 75px;
+      }
+      footer {
+        padding-left: 20px;
+        padding-right: 20px; 
+      }
+      }
+  
